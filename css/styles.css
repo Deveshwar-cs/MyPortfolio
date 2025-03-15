@@ -1,0 +1,239 @@
+.navbar {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar Links Hover Effect */
+.navbar-nav .nav-link {
+  color: white !important;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffdd57 !important;
+}
+
+/* Animated Underline on Hover */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ffdd57;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Navbar Toggler Custom Style */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.8)),
+    url("https://source.unsplash.com/1600x900/?technology,coding") no-repeat
+      center center/cover;
+  height: 100vh;
+}
+
+.hero-section h1 {
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-section p {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.btn-light {
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-light:hover {
+  background: #ffc107;
+  color: black;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  padding: 80px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: slideUp 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid #007bff;
+}
+
+.about-text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.list-inline-item {
+  font-size: 1rem;
+  padding: 8px 12px;
+  margin: 5px;
+}
+
+.skill-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  background: #e9ecef;
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.progress {
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.project-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.badge {
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+.btn-outline-primary:hover {
+  background: #007bff;
+  color: white;
+}
+
+#contact {
+  background: #f8f9fa;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.social-link {
+  font-size: 1.5rem;
+  color: #ffffff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-link:hover {
+  transform: scale(1.2);
+  color: #007bff;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #007bff;
+}
+
+.text-center a {
+  /* color: #28a745; Change color to match theme */
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.3s;
+}
