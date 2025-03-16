@@ -1,3 +1,4 @@
+require("dotenv").config()
 const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
@@ -5,14 +6,12 @@ const cors = require("cors")
 const app = express()
 
 // Middleware
-app.use(express.json()) // Parse JSON requests
-app.use(cors()) // Allow frontend requests
+app.use(express.json())
+app.use(cors())
 
-// Connect to MongoDB
+// Connect to MongoDB securely
 mongoose
-  .connect(
-    "mongodb+srv://goboby744:Hello@cluster0.qvasq.mongodb.net/ContactInfo?retryWrites=true&w=majority&appName=Cluster0"
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB Connected"))
   .catch((err) => console.error("❌ MongoDB Connection Error:", err))
 
@@ -43,5 +42,5 @@ app.post("/contact", async (req, res) => {
 })
 
 // Start Server
-const PORT = 5001
+const PORT = process.env.PORT || 5001
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`))
