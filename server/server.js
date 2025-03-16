@@ -11,11 +11,7 @@ app.use(cors()) // Allow frontend requests
 // Connect to MongoDB
 mongoose
   .connect(
-    "mongodb+srv://goboby744:Hello@cluster0.qvasq.mongodb.net/ContactInfo?retryWrites=true&w=majority&appName=Cluster0",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
+    "mongodb+srv://goboby744:Hello@cluster0.qvasq.mongodb.net/ContactInfo?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(() => console.log("✅ MongoDB Connected"))
   .catch((err) => console.error("❌ MongoDB Connection Error:", err))
