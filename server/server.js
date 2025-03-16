@@ -6,7 +6,13 @@ const app = express()
 
 // Middleware
 app.use(express.json()) // Parse JSON requests
-app.use(cors()) // Allow frontend requests
+app.use(
+  cors({
+    origin: ["https://deveshwar-cs.github.io"], // Allow GitHub Pages domain
+    methods: ["POST"],
+    allowedHeaders: ["Content-Type"],
+  })
+)
 
 // Connect to MongoDB
 mongoose
